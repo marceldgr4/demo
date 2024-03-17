@@ -22,5 +22,5 @@ public class Sugerencias {
     private LocalDateTime createdAt;
     @ManyToOne
     @JoinColumn(name = "idUser", nullable = false)
-    private Usuarios usuarios;
+   private Usuarios usuarios;
 }

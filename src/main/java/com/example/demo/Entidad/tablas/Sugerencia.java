@@ -8,19 +8,19 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Sugerencias")
+@Table(name = "sugerencias")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Sugerencias {
+public class Sugerencia {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long ID;
+    private Long id;
     private String Description;
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime createdAt;
     @ManyToOne
-    @JoinColumn(name = "idUser", nullable = false)
-   private Usuarios usuarios;
+    @JoinColumn(name = "id_usuario", nullable = false)
+   private Usuario usuarios;
 }

@@ -11,22 +11,22 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Mensajes")
+@Table(name = "mensajes")
 @Getter
 @Setter
 
-public class Mensajes {
+public class Mensaje {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long ID;
+    private Long id;
     private String CreatorMessenger;
     private  String Addressed;
     private  String CommentMessenger;
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime create_atMessenger;
     @ManyToOne
-    @JoinColumn(name = "IdUser", nullable = false)
-    private Usuarios usuarios;
+    @JoinColumn(name = "id_Usuario", nullable = false)
+    private Usuario usuarios;
 
 
 }

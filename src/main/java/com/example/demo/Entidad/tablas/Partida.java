@@ -14,14 +14,14 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Partidas")
+@Table(name = "partidas")
 @Builder
 
-public class Partidas {
+public class Partida {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private long IdParty;
+    private Long id;
     private String Creator;
     private String City;
     private  String Deport;
@@ -33,8 +33,8 @@ public class Partidas {
     private Integer Competitor;
     private  Integer Alternate;
     private String MatchComment;
-   @ManyToMany(mappedBy = "Partidas")
-   private List<Usuarios> usuarios;
+   @ManyToMany(mappedBy = "partidas")
+   private List<Usuario> usuarios;
 
 
 
